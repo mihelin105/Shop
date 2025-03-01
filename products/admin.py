@@ -1,4 +1,14 @@
 from django.contrib import admin
-from . models import Product
+from .models import Product, Offer
 
-admin.site.register(Product)
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ("name", "price", "quantity")
+
+
+class OffersAdmin(admin.ModelAdmin):
+    list_display = ("code", "discount")
+
+
+admin.site.register(Offer, OffersAdmin)
+admin.site.register(Product, ProductAdmin)
