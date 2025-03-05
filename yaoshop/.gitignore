@@ -1,1 +1,5 @@
 
+=======
+# Ignore environment variables file
+.env
+>>>>>>> 923d400 (fix)
